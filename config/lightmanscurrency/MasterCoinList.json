@@ -1,0 +1,42 @@
+{
+    "CoinEntries": [
+        {
+            "coinitem": "createdeco:gold_coinstack",
+            "chain": "main",
+            "worth": { "coin": "createdeco:gold_coin", "count": 4 },
+            "hidden": true
+        }, {
+            "coinitem": "createdeco:iron_coinstack",
+            "chain": "main",
+            "worth": { "coin": "createdeco:iron_coin", "count": 4 },
+            "hidden": true
+        }, {
+            "coinitem": "createdeco:brass_coinstack",
+            "chain": "main",
+            "worth": { "coin": "createdeco:brass_coin", "count": 4 },
+            "hidden": true
+        }, {
+            "coinitem": "createdeco:copper_coinstack",
+            "chain": "main",
+            "worth": { "coin": "createdeco:copper_coin", "count": 4 },
+            "hidden": true
+        },
+
+        {
+            "coinitem": "createdeco:gold_coin",
+            "chain": "main",
+            "worth": { "coin": "createdeco:iron_coin", "count": 4 }
+        }, {
+            "coinitem": "createdeco:iron_coin",
+            "chain": "main",
+            "worth": { "coin": "createdeco:brass_coin", "count": 5 }
+        }, {
+            "coinitem": "createdeco:brass_coin",
+            "chain": "main",
+            "worth": { "coin": "createdeco:copper_coin", "count": 5 }
+        }, {
+            "coinitem": "createdeco:copper_coin",
+            "chain": "main"
+        }
+    ]
+}

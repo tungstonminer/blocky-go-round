@@ -1,0 +1,10 @@
+.DS_Store
+crash-reports/
+ct_dumps/
+defaultconfigs
+downloads/
+journeymap/data/
+logs/
+saves/
+usercache.json
+usernamecache.json
