@@ -105,6 +105,8 @@ With your materials in hand, you'll finally be ready to build your factory with 
 * [Storage Drawers](https://www.curseforge.com/minecraft/mc-mods/storage-drawers)
 * [SuperMartijn642's Core Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib)
 * [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries)
+* [Tetra](https://www.curseforge.com/minecraft/mc-mods/tetra)
+* [TetraPak](https://www.curseforge.com/minecraft/mc-mods/tetra-pak)
 * [The Weirding Gadget](https://www.curseforge.com/minecraft/mc-mods/the-weirding-gadget)
 * [ThutCore](https://www.curseforge.com/minecraft/mc-mods/thutcore)
 * [TinyGates](https://www.curseforge.com/minecraft/mc-mods/tiny-gates)
