@@ -8,3 +8,7 @@ logs/
 saves/
 usercache.json
 usernamecache.json
+WailaErrorOutput.txt
+config/jei/world/*
+journeymap/journeymap.log
+.curseclient

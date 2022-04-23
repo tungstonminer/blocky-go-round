@@ -1,5 +1,5 @@
 #If true, when a new frontier is created, the first vertex will automatically be added where the player is.
-addVertexToNewFrontier = true
+addVertexToNewFrontier = false
 #What to do after creating a new frontier.
 #Allowed Values: Info, Edit, None
 afterCreatingFrontier = "Edit"
@@ -30,10 +30,10 @@ filterFrontierDimension = "all"
 	#Automatically switch to nearest anchor when HUD position is edited (on settings screen).
 	autoAdjustAnchor = true
 	#Automatically snap to closest border when HUD position is edited (on settings screen).
-	snapToBorder = true
+	snapToBorder = false
 	#Size of the HUD banner.
 	#Range: 1 ~ 8
-	bannerSize = 3
+	bannerSize = 8
 	#HUD element on slot 1.
 	#Allowed Values: None, Name, Owner, Banner
 	slot1 = "Name"
@@ -48,8 +48,8 @@ filterFrontierDimension = "all"
 	anchor = "MinimapHorizontal"
 	#Size of the HUD banner.
 	#Range: > -2147483648
-	xPosition = 0
+	xPosition = 295
 	#Size of the HUD banner.
 	#Range: > -2147483648
-	yPosition = 0
+	yPosition = -300
 

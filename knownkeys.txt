@@ -125,3 +125,9 @@ key.configured.open_mod_list
 tetra.toolbelt.binding.access
 tetra.toolbelt.binding.restock
 tetra.toolbelt.binding.open
+key.waila.show_recipes
+key.waila.show_uses
+key.waila.config
+key.waila.show_overlay
+key.waila.toggle_liquid
+key.waila.show_details
