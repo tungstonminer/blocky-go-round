@@ -122,3 +122,6 @@ mod.chiselsandbits.keys.key.zoom
 create.keyinfo.toolmenu
 create.keyinfo.toolbelt
 key.configured.open_mod_list
+tetra.toolbelt.binding.access
+tetra.toolbelt.binding.restock
+tetra.toolbelt.binding.open
