@@ -5,7 +5,7 @@
     "displayEntities": true,
     "displayMode": "TOGGLE",
     "hideFromDebug": true,
-    "iconMode": "TOP",
+    "iconMode": "CENTERED",
     "enableTextToSpeech": false,
     "maxHealthForRender": 40,
     "maxHeartsPerLine": 10,
@@ -61,7 +61,7 @@
           "textShadow": true
         }
       },
-      "activeTheme": "jade:dark"
+      "activeTheme": "jade:create"
     },
     "autoScaleThreshold": 0.5
   },

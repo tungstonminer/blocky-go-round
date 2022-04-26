@@ -130,3 +130,4 @@
 [compatibility]
 	#If enabled, JourneyMap waypoints will be created for each activated waystone.
 	displayWaystonesOnJourneyMap = true
+

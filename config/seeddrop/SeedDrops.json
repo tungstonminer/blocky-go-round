@@ -1,0 +1,14 @@
+{
+    "dropConfig": [
+        {
+            "item": "minecraft:wheat_seeds",
+            "chance": 1.5625
+        }, {
+            "item": "supplementaries:flax_seeds",
+            "chance": 0.3906
+        }, {
+            "item": "createcafe:cassava_seeds",
+            "chance": 0.1953
+        }
+    ]
+}
