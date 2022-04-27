@@ -164,16 +164,16 @@ key_tetra.toolbelt.binding.open:key.keyboard.x:ALT
 key_key.preciseblockplacing.toggle_new_location:key.keyboard.unknown
 key_key.preciseblockplacing.toggle_enabled:key.keyboard.unknown
 key_key.tinyredstone.rotation_lock:key.keyboard.left.alt
+key_placebo.toggleTrails:key.keyboard.unknown
 key_Show recipe book in crafting grid toggle.:key.keyboard.unknown
 key_treechop.key.toggle_chopping:scancode.0
 key_treechop.key.toggle_felling:scancode.0
 key_treechop.key.cycle_sneak_behavior:scancode.0
-key_placebo.toggleTrails:key.keyboard.unknown
 key_treechop.key.open_settings_overlay:key.keyboard.n
 key_placebo.toggleWings:key.keyboard.unknown
 key_mapfrontiers.key.open_settings:key.keyboard.f8
-key_key.inventorysorter.itemout:key.mouse.102
 key_key.inventorysorter.sort:key.keyboard.q
+key_key.inventorysorter.itemout:key.mouse.102
 key_key.inventorysorter.itemin:key.mouse.100
 key_key.waila.config:key.keyboard.f9
 key_key.waila.show_overlay:key.keyboard.unknown
@@ -182,6 +182,14 @@ key_key.waila.show_details:key.keyboard.unknown
 key_key.wallet:key.keyboard.v
 key_key.team_settings:key.keyboard.unknown
 key_key.backpack:key.keyboard.b
+key_key.worldstripper.strip_world:key.keyboard.delete
+key_key.worldstripper.dress_world:key.keyboard.unknown
+key_key.worldstripper.add_block:key.keyboard.unknown
+key_key.worldstripper.remove_block:key.keyboard.unknown
+key_key.worldstripper.increase_range:key.keyboard.unknown
+key_key.worldstripper.decrease_range:key.keyboard.unknown
+key_key.worldstripper.big_increase_range:key.keyboard.unknown
+key_key.worldstripper.big_decrease_range:key.keyboard.unknown
 key_crafts.key.up:key.keyboard.unknown
 key_crafts.key.down:key.keyboard.unknown
 key_crafts.key.right:key.keyboard.unknown
