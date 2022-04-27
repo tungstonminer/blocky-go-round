@@ -145,7 +145,7 @@ processOre(
     <item:create:crushed_aluminum_ore>,
     <item:geolosys:aluminum_ingot>,
     <item:geolosys:aluminum_nugget>,
-    <item:minecraft:blaze_powder> % 5,
+    <item:create:rose_quartz> % 25,
     1, 75,
     2, 25
 );
