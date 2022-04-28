@@ -1,6 +1,5 @@
 {
     "config": {
-        "baseRadius": 6,
         "biomes": {
             "filter": [
                 "minecraft:old_growth_pine_taiga",

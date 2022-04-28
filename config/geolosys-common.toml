@@ -29,7 +29,7 @@
 	#The upper limit of RNG for generating any pluton in a given chunk.
 	#Larger values indicate further distance between plutons.
 	#Range: 0.0 ~ 1.0
-	chunkSkipChance = 0.5
+	chunkSkipChance = 0.66
 
 #Feature Control
 ["feature control"]
@@ -53,4 +53,3 @@
 	enableYellorium = false
 	#This will make is so that Coal has a rare chance of dropping sulfur
 	enableSulfur = true
-

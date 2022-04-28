@@ -4,7 +4,9 @@ import mods.jei.JEI;
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var _ = <item:minecraft:air>;
+var aluminumIngot = <item:geolosys:aluminum_ingot>;
 var atm = <item:lightmanscurrency:atm>;
+var blackDye = <tag:items:forge:dyes/black>;
 var capacitor = <item:createaddition:capacitor>;
 var cashRegister = <item:lightmanscurrency:cash_register>;
 var chest = <item:minecraft:chest>;
@@ -19,15 +21,22 @@ var glassPane = <item:minecraft:glass_pane>;
 var goldIngot = <item:minecraft:gold_ingot>;
 var goldWallet = <item:lightmanscurrency:wallet_gold>;
 var ironIngot = <item:minecraft:iron_ingot>;
-var ironSheet = <item:create:iron_sheet>;
 var ironWallet = <item:lightmanscurrency:wallet_iron>;
 var leather = <item:minecraft:leather>;
+var largeVendingMachine = <item:lightmanscurrency:vending_machine_large>;
 var netherIngot = <item:minecraft:netherite_ingot>;
 var netherWallet = <item:lightmanscurrency:wallet_netherite>;
 var panel = <item:tinyredstone:redstone_panel>;
+var paygate = <item:lightmanscurrency:paygate>;
+var redstone = <item:minecraft:redstone>;
+var redstoneBlock = <item:minecraft:redstone_block>;
+var redstoneTorch = <item:minecraft:redstone_torch>;
 var server = <item:lightmanscurrency:item_trader_server_sml>;
 var tradingCore = <item:lightmanscurrency:trading_core>;
+var ticketKiosk = <item:lightmanscurrency:ticket_kiosk>;
+var ticketMachine = <item:lightmanscurrency:ticket_machine>;
 var tube = <item:create:electron_tube>;
+var vendingMachine = <item:lightmanscurrency:vending_machine>;
 var wire = <item:createaddition:copper_wire>;
 
 var itemsToRemove = [
@@ -71,17 +80,17 @@ craftingTable.removeByName("lightmanscurrency:portable_terminal2");
 // ATM
 craftingTable.remove(atm);
 craftingTable.addShaped("atm", atm, [
-    [ ironSheet, glassPane, ironSheet ],
-    [ ironSheet, comparator, ironSheet ],
-    [ ironSheet, goldWallet, ironSheet ],
+    [ aluminumIngot, glassPane, aluminumIngot ],
+    [ aluminumIngot, comparator, aluminumIngot ],
+    [ aluminumIngot, goldWallet, aluminumIngot ],
 ]);
 
 // Cash Register
 craftingTable.remove(cashRegister);
 craftingTable.addShaped("cash_register", cashRegister, [
-    [ ironSheet, ironSheet, ironSheet ],
+    [ aluminumIngot, aluminumIngot, aluminumIngot ],
     [ capacitor, ironWallet, tube ],
-    [ ironSheet, ironSheet, ironSheet ],
+    [ aluminumIngot, aluminumIngot, aluminumIngot ],
 ]);
 
 // Copper Wallet
@@ -108,14 +117,54 @@ craftingTable.remove(ironWallet);
 craftingTable.addShaped("iron_wallet", ironWallet, [[ leather, ironIngot, leather ]]);
 craftingTable.addShapeless("iron_wallet_upgrade", ironWallet, [ copperWallet, ironIngot ]);
 
+// Large Vending Machine
+craftingTable.remove(largeVendingMachine);
+craftingTable.addShaped("vending_machine_large", largeVendingMachine, [
+    [ aluminumIngot, glassPane, aluminumIngot ],
+    [ aluminumIngot, glassPane, aluminumIngot ],
+    [ chest, vendingMachine, chest ],
+]);
+
 // Netherite Wallet
 craftingTable.remove(netherWallet);
 craftingTable.addShaped("nether_wallet", netherWallet, [[ leather, netherIngot, leather ]]);
 craftingTable.addShapeless("nether_wallet_upgrade", netherWallet, [ diamondWallet, netherIngot ]);
+
+// Paygate
+craftingTable.remove(paygate);
+craftingTable.addShaped("paygate", paygate, [
+    [ aluminumIngot, redstoneBlock, aluminumIngot ],
+    [ aluminumIngot, tradingCore, aluminumIngot ],
+    [ aluminumIngot, redstoneTorch, aluminumIngot ],
+]);
+
+// Ticket Kiosk
+craftingTable.remove(ticketKiosk);
+craftingTable.addShaped("ticket_kiosk", ticketKiosk, [
+    [ aluminumIngot, aluminumIngot, aluminumIngot ],
+    [ aluminumIngot, blackDye, aluminumIngot ],
+    [ redstone, tradingCore, redstone ],
+]);
+
+// Ticket Machine
+craftingTable.remove(ticketMachine);
+craftingTable.addShaped("ticket_machine", ticketMachine, [
+    [ aluminumIngot, blackDye, aluminumIngot ],
+    [ aluminumIngot, blackDye, aluminumIngot ],
+    [ redstone, redstone, redstone ],
+]);
 
 // Trading Core
 craftingTable.remove(tradingCore);
 craftingTable.addShaped("trading_core", tradingCore, [
     [ _, wire, _ ],
     [ tube, panel, capacitor ]
+]);
+
+// Vending Machine
+craftingTable.remove(vendingMachine);
+craftingTable.addShaped("vending_machine", vendingMachine, [
+    [ aluminumIngot, glassPane, aluminumIngot ],
+    [ aluminumIngot, glassPane, aluminumIngot ],
+    [ chest, tradingCore, chest ],
 ]);
