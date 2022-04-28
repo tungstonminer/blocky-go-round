@@ -1,0 +1,37 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:windswept_savanna"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "minecraft:granite",
+                    "chance": 1
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "size": 100,
+        "yMax": 92,
+        "yMin": 32
+    },
+    "type": "geolosys:deposit_dense"
+}

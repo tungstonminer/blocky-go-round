@@ -1,0 +1,43 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:desert"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "create:scoria",
+                    "chance": 0.7
+                },
+                {
+                    "block": "create:scorchia",
+                    "chance": 0.2
+                },
+                {
+                    "block": "minecraft:lava",
+                    "chance": 0.1
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "size": 75,
+        "yMax": 70,
+        "yMin": 2
+    },
+    "type": "geolosys:deposit_dense"
+}

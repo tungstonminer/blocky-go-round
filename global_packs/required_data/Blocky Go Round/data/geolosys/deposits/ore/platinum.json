@@ -1,0 +1,57 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:cold_ocean",
+                "minecraft:deep_cold_ocean",
+                "minecraft:deep_frozen_ocean",
+                "minecraft:deep_lukewarm_ocean",
+                "minecraft:deep_ocean",
+                "minecraft:frozen_ocean",
+                "minecraft:lukewarm_ocean",
+                "minecraft:ocean",
+                "minecraft:warm_ocean"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:platinum_ore",
+                    "chance": 0.6
+                },
+                {
+                    "block": null,
+                    "chance": 0.4
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_platinum_ore",
+                    "chance": 0.8
+                },
+                {
+                    "block": null,
+                    "chance": 0.2
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 20,
+        "samples": [
+            {
+                "block": "geolosys:platinum_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 64,
+        "yMax": 19,
+        "yMin": -25
+    },
+    "type": "geolosys:deposit_dense"
+}

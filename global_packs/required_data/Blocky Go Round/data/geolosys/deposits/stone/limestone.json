@@ -1,0 +1,47 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:cold_ocean",
+                "minecraft:deep_cold_ocean",
+                "minecraft:deep_frozen_ocean",
+                "minecraft:deep_lukewarm_ocean",
+                "minecraft:deep_ocean",
+                "minecraft:frozen_ocean",
+                "minecraft:frozen_river",
+                "minecraft:lukewarm_ocean",
+                "minecraft:ocean",
+                "minecraft:river",
+                "minecraft:warm_ocean"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "create:limestone",
+                    "chance": 1
+                }
+            ]
+        },
+        "depth": 2,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "radius": 100,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "size": 100,
+        "yMax": 48,
+        "yMin": 0
+    },
+    "type": "geolosys:deposit_layer"
+}

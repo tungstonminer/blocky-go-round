@@ -1,0 +1,38 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:beach",
+                "minecraft:snowy_beach",
+                "minecraft:stony_shore"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "minecraft:calcite",
+                    "chance": 1
+                }
+            ]
+        },
+        "depth": 2,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "radius": 64,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "yMax": 96,
+        "yMin": 48
+    },
+    "type": "geolosys:deposit_layer"
+}

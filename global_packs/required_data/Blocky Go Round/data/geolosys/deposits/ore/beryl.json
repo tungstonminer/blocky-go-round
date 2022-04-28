@@ -1,0 +1,65 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:bamboo_jungle",
+                "minecraft:birch_forest",
+                "minecraft:dark_forest",
+                "minecraft:flower_forest",
+                "minecraft:forest",
+                "minecraft:jungle",
+                "minecraft:old_growth_birch_forest",
+                "minecraft:sparse_jungle"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:beryl_ore",
+                    "chance": 0.25
+                },
+                {
+                    "block": "minecraft:lava",
+                    "chance": 0.25
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_beryl_ore",
+                    "chance": 0.25
+                },
+                {
+                    "block": "minecraft:lava",
+                    "chance": 0.25
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ]
+        },
+        "depth": 16,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 10,
+        "radius": 4,
+        "samples": [
+            {
+                "block": "geolosys:beryl_ore_sample",
+                "chance": 1
+            }
+        ],
+        "yMax": -32,
+        "yMin": -54
+    },
+    "type": "geolosys:deposit_layer"
+}

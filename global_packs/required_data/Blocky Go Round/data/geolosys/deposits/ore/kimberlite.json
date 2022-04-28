@@ -1,0 +1,68 @@
+{
+    "config": {
+        "baseRadius": 8,
+        "biomes": {
+            "filter": [
+                "minecraft:frozen_peaks",
+                "minecraft:grove",
+                "minecraft:jagged_peaks",
+                "minecraft:meadow",
+                "minecraft:mushroom_fields",
+                "minecraft:snowy_slopes",
+                "minecraft:stony_peaks",
+                "minecraft:windswept_forest",
+                "minecraft:windswept_gravelly_hills",
+                "minecraft:windswept_hills"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:kimberlite_ore",
+                    "chance": 0.25
+                },
+                {
+                    "block": "minecraft:lava",
+                    "chance": 0.25
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_kimberlite_ore",
+                    "chance": 0.25
+                },
+                {
+                    "block": "minecraft:lava",
+                    "chance": 0.25
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ]
+        },
+        "depth": 16,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 10,
+        "radius": 2,
+        "samples": [
+            {
+                "block": "geolosys:kimberlite_ore_sample",
+                "chance": 1
+            }
+        ],
+        "yMax": -32,
+        "yMin": -54
+    },
+    "type": "geolosys:deposit_dike"
+}

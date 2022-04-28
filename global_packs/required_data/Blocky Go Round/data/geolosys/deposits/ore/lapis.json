@@ -1,0 +1,51 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:frozen_river",
+                "minecraft:river"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:lapis_ore",
+                    "chance": 0.55
+                },
+                {
+                    "block": null,
+                    "chance": 0.45
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_lapis_ore",
+                    "chance": 0.55
+                },
+                {
+                    "block": null,
+                    "chance": 0.45
+                }
+            ]
+        },
+        "depth": 2,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 10,
+        "radius": 16,
+        "samples": [
+            {
+                "block": "geolosys:lapis_ore_sample",
+                "chance": 1
+            }
+        ],
+        "yMax": 64,
+        "yMin": 48
+    },
+    "type": "geolosys:deposit_layer"
+}

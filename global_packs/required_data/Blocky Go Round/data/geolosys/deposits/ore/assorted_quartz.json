@@ -1,0 +1,70 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:beach",
+                "minecraft:stony_shore",
+                "minecraft:snowy_beach",
+                "minecraft:ocean",
+                "minecraft:frozen_ocean",
+                "minecraft:deep_ocean",
+                "minecraft:warm_ocean",
+                "minecraft:lukewarm_ocean",
+                "minecraft:cold_ocean",
+                "minecraft:deep_lukewarm_ocean",
+                "minecraft:deep_cold_ocean",
+                "minecraft:deep_frozen_ocean",
+                "minecraft:plains",
+                "minecraft:snowy_plains",
+                "minecraft:sunflower_plains",
+                "minecraft:ice_spikes",
+                "minecraft:desert",
+                "minecraft:taiga",
+                "minecraft:snowy_taiga",
+                "minecraft:old_growth_pine_taiga",
+                "minecraft:old_growth_spruce_taiga"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:quartz_ore",
+                    "chance": 0.5
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_quartz_ore",
+                    "chance": 0.75
+                },
+                {
+                    "block": null,
+                    "chance": 0.25
+                }
+            ]
+        },
+        "depth": 16,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 10,
+        "radius": 8,
+        "samples": [
+            {
+                "block": "geolosys:quartz_ore_sample",
+                "chance": 1
+            }
+        ],
+        "yMax": 16,
+        "yMin": -64
+    },
+    "type": "geolosys:deposit_layer"
+}

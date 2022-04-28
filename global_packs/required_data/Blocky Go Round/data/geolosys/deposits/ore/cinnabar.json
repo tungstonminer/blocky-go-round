@@ -1,0 +1,56 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:badlands",
+                "minecraft:eroded_badlands",
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:swamp",
+                "minecraft:windswept_savanna",
+                "minecraft:wooded_badlands"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:cinnabar_ore",
+                    "chance": 0.5
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_cinnabar_ore",
+                    "chance": 0.5
+                },
+                {
+                    "block": null,
+                    "chance": 0.5
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 10,
+        "samples": [
+            {
+                "block": "geolosys:cinnabar_ore_sample",
+                "chance": 1
+            }
+        ],
+        "depth": 16,
+        "radius": 8,
+        "yMax": 16,
+        "yMin": -64
+    },
+    "type": "geolosys:deposit_layer"
+}

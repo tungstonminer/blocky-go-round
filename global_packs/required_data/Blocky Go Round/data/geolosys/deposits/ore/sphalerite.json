@@ -1,0 +1,52 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:ice_spikes",
+                "minecraft:plains",
+                "minecraft:snowy_plains",
+                "minecraft:sunflower_plains"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:sphalerite_ore",
+                    "chance": 0.6
+                },
+                {
+                    "block": null,
+                    "chance": 0.4
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_sphalerite_ore",
+                    "chance": 0.8
+                },
+                {
+                    "block": null,
+                    "chance": 0.2
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 20,
+        "samples": [
+            {
+                "block": "geolosys:sphalerite_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 64,
+        "yMax": 48,
+        "yMin": -48
+    },
+    "type": "geolosys:deposit_dense"
+}

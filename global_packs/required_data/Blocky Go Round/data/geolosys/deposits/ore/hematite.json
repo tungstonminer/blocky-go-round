@@ -1,0 +1,54 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:windswept_hills",
+                "minecraft:windswept_forest",
+                "minecraft:grove",
+                "minecraft:meadow",
+                "minecraft:windswept_gravelly_hills"
+            ],
+            "isBlacklist": false
+        },
+        "baseRadius": 2,
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:hematite_ore",
+                    "chance": 0.6
+                },
+                {
+                    "block": null,
+                    "chance": 0.4
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_hematite_ore",
+                    "chance": 0.8
+                },
+                {
+                    "block": null,
+                    "chance": 0.2
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 20,
+        "samples": [
+            {
+                "block": "geolosys:hematite_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 64,
+        "yMax": 48,
+        "yMin": -48
+    },
+    "type": "geolosys:deposit_dense"
+}

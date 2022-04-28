@@ -1,0 +1,43 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:ice_spikes",
+                "minecraft:plains",
+                "minecraft:snowy_plains",
+                "minecraft:sunflower_plains",
+                "minecraft:swamp"
+            ],
+            "isBlacklist": false
+        },
+        "blockStateMatchers": [
+            "minecraft:dirt",
+            "minecraft:grass_block"
+        ],
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:peat",
+                    "chance": 1
+                }
+            ]
+        },
+        "chanceForSample": 0.25,
+        "depth": 4,
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 6,
+        "radius": 16,
+        "samples": [
+            {
+                "block": "geolosys:rhododendron",
+                "chance": 1
+            }
+        ]
+    },
+    "type": "geolosys:deposit_top_layer"
+}

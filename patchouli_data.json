@@ -1,1 +1,20 @@
-{"bookGuiScale":0,"clickedVisualize":false,"bookData":{}}
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": false,
+  "bookData": {
+    "geolosys:field_manual": {
+      "viewedEntries": [
+        "geolosys:03_resources/ancient_debris",
+        "geolosys:03_resources/anthracitic_coal",
+        "geolosys:03_resources/autunite"
+      ],
+      "bookmarks": [],
+      "history": [
+        "geolosys:03_resources/autunite",
+        "geolosys:03_resources/anthracitic_coal",
+        "geolosys:03_resources/ancient_debris"
+      ],
+      "completedManualQuests": []
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:old_growth_pine_taiga",
+                "minecraft:old_growth_spruce_taiga",
+                "minecraft:snowy_taiga",
+                "minecraft:taiga"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "minecraft:diorite",
+                    "chance": 1
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "size": 100,
+        "yMax": 92,
+        "yMin": 32
+    },
+    "type": "geolosys:deposit_dense"
+}

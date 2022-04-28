@@ -1,0 +1,51 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:windswept_savanna"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:bauxite_ore",
+                    "chance": 0.60
+                },
+                {
+                    "block": null,
+                    "chance": 0.40
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_bauxite_ore",
+                    "chance": 0.80
+                },
+                {
+                    "block": null,
+                    "chance": 0.20
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 20,
+        "samples": [
+            {
+                "block": "geolosys:bauxite_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 64,
+        "yMax": 48,
+        "yMin": -48
+    },
+    "type": "geolosys:deposit_dense"
+}

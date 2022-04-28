@@ -1,0 +1,60 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:mushroom_fields"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:autunite_ore",
+                    "chance": 0.48
+                },
+                {
+                    "block": "geolosys:lead_ore",
+                    "chance": 0.12
+                },
+                {
+                    "block": null,
+                    "chance": 0.40
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_autunite_ore",
+                    "chance": 0.64
+                },
+                {
+                    "block": "geolosys:deepslate_lead_ore",
+                    "chance": 0.16
+                },
+                {
+                    "block": null,
+                    "chance": 0.20
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 20,
+        "samples": [
+            {
+                "block": "geolosys:autunite_ore_sample",
+                "chance": 0.8
+            }, {
+                "block": "geolosys:lead_ore_sample",
+                "chance": 0.2
+            }
+        ],
+        "size": 64,
+        "yMax": 48,
+        "yMin": -48
+    },
+    "type": "geolosys:deposit_dense"
+}

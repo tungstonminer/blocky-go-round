@@ -1,0 +1,44 @@
+{
+    "config": {
+        "biomes": {
+            "filter": [
+                "minecraft:birch_forest",
+                "minecraft:dark_forest",
+                "minecraft:flower_forest",
+                "minecraft:forest",
+                "minecraft:old_growth_birch_forest",
+                "minecraft:swamp"
+            ],
+            "isBlacklist": false
+        },
+        "blocks": {
+            "default": [
+                {
+                    "block": "create:veridium",
+                    "chance": 0.9
+                },
+                {
+                    "block": "geolosys:malachite_ore",
+                    "chance": 0.1
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 40,
+        "samples": [
+            {
+                "block": null,
+                "chance": 1
+            }
+        ],
+        "size": 75,
+        "yMax": 70,
+        "yMin": 2
+    },
+    "type": "geolosys:deposit_dense"
+}
