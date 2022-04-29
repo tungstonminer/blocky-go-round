@@ -131,3 +131,5 @@ key.waila.config
 key.waila.show_overlay
 key.waila.toggle_liquid
 key.waila.show_details
+fpsreducer.key.openGui
+fpsreducer.key.forceIdle
