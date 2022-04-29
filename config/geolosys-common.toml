@@ -34,9 +34,9 @@
 #Feature Control
 ["feature control"]
 	#Output info into the logs when generating Geolosys deposits
-	debugWorldgen = false
+	debugWorldgen = true
 	#Outputs really advanced info when generating deposits.
-	advancedDebugWorldGen = false
+	advancedDebugWorldGen = true
 	#The fallback materials which a Deposit can replace if they're not specified by the deposit itself
 	#Format: Comma-delimited set of <modid:block> (see default for example)
 	defaultReplacementMaterials = ["minecraft:stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:netherrack", "minecraft:sandstone", "minecraft:deepslate", "minecraft:tuff", "minecraft:calcite", "minecraft:dripstone_block"]

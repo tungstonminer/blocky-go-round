@@ -1,2 +1,44 @@
 {
+    "config": {
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:lignite_ore",
+                    "chance": 0.6
+                },
+                {
+                    "block": null,
+                    "chance": 0.4
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_lignite_ore",
+                    "chance": 0.6
+                },
+                {
+                    "block": null,
+                    "chance": 0.4
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 7,
+        "samples": [
+            {
+                "block": "geolosys:lignite_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 64,
+        "spread": 16,
+        "yMax": 64,
+        "yMin": 32
+    },
+    "type": "geolosys:deposit_sparse"
 }

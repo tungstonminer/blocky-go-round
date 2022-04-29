@@ -45,7 +45,7 @@
             }
         ],
         "yMax": 64,
-        "yMin": 48
+        "yMin": 32
     },
     "type": "geolosys:deposit_layer"
 }

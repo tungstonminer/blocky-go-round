@@ -12,7 +12,7 @@
 	stripStartY = 256
 	#Strip Stop: Y
 	#Range: -10240 ~ 10240
-	stripStopY = -64
+	stripStopY = -63
 	#Replacement Block
 	replacementBlock = "minecraft:air"
 
@@ -27,4 +27,3 @@
 		renderMainThread = true
 		#Block Update Neighbors
 		updateNeighbors = false
-

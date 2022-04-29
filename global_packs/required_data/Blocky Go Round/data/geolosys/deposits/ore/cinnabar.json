@@ -50,7 +50,7 @@
         "depth": 16,
         "radius": 8,
         "yMax": 16,
-        "yMin": -64
+        "yMin": -60
     },
     "type": "geolosys:deposit_layer"
 }

@@ -3,42 +3,42 @@
         "blocks": {
             "default": [
                 {
-                    "block": "minecraft:coal_ore",
-                    "chance": 0.55
+                    "block": "geolosys:coal_ore",
+                    "chance": 0.5
                 },
                 {
                     "block": null,
-                    "chance": 0.45
+                    "chance": 0.5
                 }
             ],
             "minecraft:deepslate": [
                 {
-                    "block": "minecraft:coal_ore",
-                    "chance": 0.55
+                    "block": "geolosys:deepslate_coal_ore",
+                    "chance": 0.5
                 },
                 {
                     "block": null,
-                    "chance": 0.45
+                    "chance": 0.5
                 }
             ]
         },
-        "depth": 5,
         "dimensions": {
             "filter": [
                 "overworld"
             ],
             "isBlacklist": false
         },
-        "generationWeight": 6,
-        "radius": 13,
+        "generationWeight": 8,
         "samples": [
             {
                 "block": "geolosys:coal_ore_sample",
                 "chance": 1
             }
         ],
-        "yMax": 72,
-        "yMin": 56
+        "size": 80,
+        "spread": 20,
+        "yMax": 256,
+        "yMin": 64
     },
-    "type": "geolosys:deposit_layer"
+    "type": "geolosys:deposit_sparse"
 }

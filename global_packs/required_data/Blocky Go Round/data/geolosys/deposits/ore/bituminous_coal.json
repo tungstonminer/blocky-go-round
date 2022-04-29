@@ -1,2 +1,44 @@
 {
+    "config": {
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:bituminous_coal_ore",
+                    "chance": 0.7
+                },
+                {
+                    "block": null,
+                    "chance": 0.3
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_bituminous_coal_ore",
+                    "chance": 0.7
+                },
+                {
+                    "block": null,
+                    "chance": 0.3
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 9,
+        "samples": [
+            {
+                "block": "geolosys:bituminous_coal_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 48,
+        "spread": 12,
+        "yMax": 32,
+        "yMin": -32
+    },
+    "type": "geolosys:deposit_sparse"
 }

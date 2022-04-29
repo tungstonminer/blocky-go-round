@@ -1,2 +1,44 @@
 {
+    "config": {
+        "blocks": {
+            "default": [
+                {
+                    "block": "geolosys:anthracite_coal_ore",
+                    "chance": 0.8
+                },
+                {
+                    "block": null,
+                    "chance": 0.2
+                }
+            ],
+            "minecraft:deepslate": [
+                {
+                    "block": "geolosys:deepslate_anthracite_coal_ore",
+                    "chance": 0.8
+                },
+                {
+                    "block": null,
+                    "chance": 0.2
+                }
+            ]
+        },
+        "dimensions": {
+            "filter": [
+                "overworld"
+            ],
+            "isBlacklist": false
+        },
+        "generationWeight": 6,
+        "samples": [
+            {
+                "block": "geolosys:anthracite_coal_ore_sample",
+                "chance": 1
+            }
+        ],
+        "size": 32,
+        "spread": 8,
+        "yMax": -32,
+        "yMin": -60
+    },
+    "type": "geolosys:deposit_sparse"
 }

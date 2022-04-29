@@ -146,6 +146,12 @@ Coals
 
 coals: anthracite (20), bituminous (16), lignite (12), vanilla (8), peat (6)
 
+anthracite: 6
+bituminous: 9
+lignite: 7
+vanilla: 8
+
+
 anthracite: 136..168
 bituminous: 104..136
 lignite: 72..104
