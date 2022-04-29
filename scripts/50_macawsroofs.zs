@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var _ = <item:minecraft:air>;
+var rainGutter = <item:mcwroofs:rain_gutter>;
+var tinNugget = <item:geolosys:tin_nugget>;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Rain Gutter (item)
+craftingTable.remove(rainGutter);
+craftingTable.addShaped("rain_gutter", rainGutter, [
+    [ tinNugget, _, tinNugget ],
+    [ _, tinNugget, _ ]
+]);

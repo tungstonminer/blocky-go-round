@@ -1,7 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var _ = <item:minecraft:air>;
+var brassIngot = <item:create:brass_ingot>;
 var bucket = <item:minecraft:bucket>;
+var clock = <item:minecraft:clock>;
+var chiseledStoneBricks = <item:minecraft:chiseled_stone_bricks>;
+var compass = <item:minecraft:compass>;
+var comparator = <item:minecraft:comparator>;
+var crossbow = <item:minecraft:crossbow>;
 var diamond = <item:minecraft:diamond>;
 var diamondHorseArmor = <item:minecraft:diamond_horse_armor>;
 var flint = <item:minecraft:flint>;
@@ -19,16 +25,31 @@ var ironLeggings = <item:minecraft:iron_leggings>;
 var ironPickaxe = <item:minecraft:iron_pickaxe>;
 var ironShovel = <item:minecraft:iron_shovel>;
 var ironSword = <item:minecraft:iron_sword>;
+var lantern = <item:minecraft:lantern>;
 var leather = <item:minecraft:leather>;
 var leatherHorseArmor = <item:minecraft:leather_horse_armor>;
+var lodestone = <item:minecraft:lodestone>;
 var nickelIngot = <item:geolosys:nickel_ingot>;
+var nickelNugget = <item:geolosys:nickel_nugget>;
+var platinumNugget = <item:geolosys:platinum_nugget>;
+var precisionMechanism = <item:create:precision_mechanism>;
+var quartz = <item:minecraft:quartz>;
+var redstone = <item:minecraft:redstone>;
+var redstoneTorch = <item:minecraft:redstone_torch>;
+var repeater = <item:minecraft:repeater>;
 var saddle = <item:minecraft:saddle>;
 var shears = <item:minecraft:shears>;
 var shield = <item:minecraft:shield>;
+var silicon = <item:tinyredstone:silicon>;
+var soulLantern = <item:minecraft:soul_lantern>;
+var soulTorch = <item:minecraft:soul_torch>;
 var steelIngot = <item:alloyed:steel_ingot>;
 var stick = <item:minecraft:stick>;
 var stringItem = <item:minecraft:string>;
 var tinIngot = <item:geolosys:tin_ingot>;
+var tinNugget = <item:geolosys:tin_nugget>;
+var torch = <item:minecraft:torch>;
+var tripwireHook = <item:minecraft:tripwire_hook>;
 var woodPlank = <tag:items:minecraft:planks>;
 var wool = <tag:items:minecraft:wool>;
 
@@ -42,6 +63,38 @@ craftingTable.remove(bucket);
 craftingTable.addShaped("bucket", bucket, [
     [ tinIngot, _, tinIngot ],
     [ _, tinIngot, _ ],
+]);
+
+// Clock
+craftingTable.remove(clock);
+craftingTable.addShaped("clock", clock, [
+    [ _, tinNugget, _ ],
+    [ _, precisionMechanism, tinNugget ],
+    [ stringItem, _, _ ],
+]);
+
+// Comparator
+craftingTable.remove(comparator);
+craftingTable.addShaped("comparator", comparator, [
+    [ _, redstoneTorch, _ ],
+    [ redstoneTorch, quartz, redstoneTorch ],
+    [ silicon, silicon, silicon ],
+]);
+
+// Compass
+craftingTable.remove(compass);
+craftingTable.addShaped("compass", compass, [
+    [ _, tinIngot, ],
+    [ tinIngot, nickelNugget, tinIngot ],
+    [ _, tinIngot, ],
+]);
+
+// Crossbow
+craftingTable.remove(crossbow);
+craftingTable.addShaped("crossbow", crossbow, [
+    [ stick, steelIngot, stick ],
+    [ stringItem, tripwireHook, stringItem ],
+    [ _, stick, _ ],
 ]);
 
 // Diamond Horse Armor
@@ -142,12 +195,35 @@ craftingTable.addShaped("iron_sword", ironSword, [
     [ stick ],
 ]);
 
+// Lantern
+craftingTable.remove(lantern);
+craftingTable.addShaped("lantern", lantern, [
+    [ tinNugget, tinNugget, tinNugget ],
+    [ tinNugget, torch, tinNugget ],
+    [ tinNugget, tinNugget, tinNugget ],
+]);
+
 // Leather Horse Armor
 craftingTable.remove(leatherHorseArmor);
 craftingTable.addShaped("leather_horse_armor", leatherHorseArmor, [
     [ leather, leather, leather ],
     [ leather, wool, leather ],
     [ leather, _, leather ],
+]);
+
+// Lodestone
+craftingTable.remove(lodestone);
+craftingTable.addShaped("lodestone", lodestone, [
+    [ chiseledStoneBricks, chiseledStoneBricks, chiseledStoneBricks ],
+    [ chiseledStoneBricks, nickelIngot, chiseledStoneBricks ],
+    [ chiseledStoneBricks, chiseledStoneBricks, chiseledStoneBricks ],
+]);
+
+// Repeater
+craftingTable.remove(repeater);
+craftingTable.addShaped("repeater", repeater, [
+    [ redstoneTorch, redstone, redstoneTorch ],
+    [ silicon, silicon, silicon ],
 ]);
 
 // Saddle
@@ -163,4 +239,12 @@ craftingTable.addShaped("shield", shield, [
     [ woodPlank, steelIngot, woodPlank ],
     [ woodPlank, woodPlank, woodPlank ],
     [ _, woodPlank, _ ],
+]);
+
+// Soul Lantern
+craftingTable.remove(soulLantern);
+craftingTable.addShaped("soul_lanter", soulLantern, [
+    [ platinumNugget, platinumNugget, platinumNugget ],
+    [ platinumNugget, soulTorch, platinumNugget ],
+    [ platinumNugget, platinumNugget, platinumNugget ],
 ]);

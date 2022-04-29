@@ -1,0 +1,13 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var insulatedPlate = <item:tetra:vent_plate>;
+var leadIngot = <item:geolosys:lead_ingot>;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Insulated Plate
+craftingTable.remove(insulatedPlate);
+craftingTable.addShaped("insulated_plate", insulatedPlate, [
+    [ leadIngot, leadIngot ],
+    [ leadIngot, leadIngot ],
+]);
