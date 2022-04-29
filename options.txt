@@ -36,7 +36,7 @@ ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:true
-resourcePacks:["vanilla","mod_resources","Supplementaries Virtual Resourcepack","global:Blocky Go Round"]
+resourcePacks:["vanilla","mod_resources","global:Blocky Go Round","Supplementaries Virtual Resourcepack"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -186,7 +186,7 @@ key_key.team_settings:key.keyboard.unknown
 key_key.backpack:key.keyboard.b
 key_key.worldstripper.strip_world:key.keyboard.delete
 key_key.worldstripper.dress_world:key.keyboard.delete:SHIFT
-key_key.worldstripper.add_block:key.keyboard.unknown
+key_key.worldstripper.add_block:key.keyboard.equal:SHIFT
 key_key.worldstripper.remove_block:key.keyboard.minus:SHIFT
 key_key.worldstripper.increase_range:key.keyboard.unknown
 key_key.worldstripper.decrease_range:key.keyboard.unknown
