@@ -9,7 +9,9 @@ var brassSheet = <item:create:brass_sheet>;
 var bubbleBlower = <item:supplementaries:bubble_blower>.withDamage(250);
 var copperLantern = <item:supplementaries:copper_lantern>;
 var copperNugget = <item:create:copper_nugget>;
+var doormat = <item:supplementaries:doormat>;
 var faucet = <item:supplementaries:faucet>;
+var flax = <item:supplementaries:flax>;
 var glass = <item:minecraft:glass>;
 var goblet = <item:supplementaries:goblet>;
 var hourglass = <item:supplementaries:hourglass>;
@@ -18,6 +20,7 @@ var key = <item:supplementaries:key>;
 var nickelIngot = <item:geolosys:nickel_ingot>;
 var platinumNugget = <item:geolosys:platinum_nugget>;
 var redstone = <item:minecraft:redstone>;
+var rope = <item:supplementaries:rope>;
 var silverIngot = <item:geolosys:silver_ingot>;
 var silverNugget = <item:geolosys:silver_nugget>;
 var sconce = <item:supplementaries:sconce>;
@@ -66,6 +69,13 @@ craftingTable.addShaped("copper_lantern", copperLantern, [
     [ copperNugget, copperNugget, copperNugget ],
 ]);
 
+// Doormat
+craftingTable.remove(doormat);
+craftingTable.addShaped("doormat", doormat, [
+    [ flax, flax, flax ],
+    [ flax, flax, flax ],
+]);
+
 // Faucet
 craftingTable.remove(faucet);
 craftingTable.addShaped("faucet", faucet, [
@@ -96,6 +106,14 @@ craftingTable.addShaped("key", key, [
     [ brassIngot ],
     [ brassNugget ],
     [ brassNugget ],
+]);
+
+// Rope
+craftingTable.remove(rope);
+craftingTable.addShaped("rope", rope, [
+    [ stringItem ],
+    [ stringItem ],
+    [ stringItem ],
 ]);
 
 // Sconce

@@ -1,15 +1,22 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var _ = <item:minecraft:air>;
+var aluminumIngot = <item:geolosys:aluminum_ingot>;
+var anthraciteCoal = <item:geolosys:anthracite_coal>;
+var bitumenousCoal = <item:geolosys:bituminous_coal>;
 var brassIngot = <item:create:brass_ingot>;
 var bucket = <item:minecraft:bucket>;
-var clock = <item:minecraft:clock>;
+var charcoal = <item:minecraft:charcoal>;
 var chiseledStoneBricks = <item:minecraft:chiseled_stone_bricks>;
-var compass = <item:minecraft:compass>;
+var clock = <item:minecraft:clock>;
+var coal = <item:minecraft:coal>;
 var comparator = <item:minecraft:comparator>;
+var compass = <item:minecraft:compass>;
 var crossbow = <item:minecraft:crossbow>;
 var diamond = <item:minecraft:diamond>;
 var diamondHorseArmor = <item:minecraft:diamond_horse_armor>;
+var flax = <item:supplementaries:flax>;
+var flaxSeeds = <item:supplementaries:flax_seeds>;
 var flint = <item:minecraft:flint>;
 var flintAndSteel = <item:minecraft:flint_and_steel>;
 var goldHorseArmor = <item:minecraft:golden_horse_armor>;
@@ -28,9 +35,13 @@ var ironSword = <item:minecraft:iron_sword>;
 var lantern = <item:minecraft:lantern>;
 var leather = <item:minecraft:leather>;
 var leatherHorseArmor = <item:minecraft:leather_horse_armor>;
+var ligniteCoal = <item:geolosys:lignite_coal>;
 var lodestone = <item:minecraft:lodestone>;
+var miniCharcoal = <item:minicoal:mini_charcoal>;
+var miniCoal = <item:minicoal:mini_coal>;
 var nickelIngot = <item:geolosys:nickel_ingot>;
 var nickelNugget = <item:geolosys:nickel_nugget>;
+var peatCoal = <item:geolosys:peat_coal>;
 var platinumNugget = <item:geolosys:platinum_nugget>;
 var precisionMechanism = <item:create:precision_mechanism>;
 var quartz = <item:minecraft:quartz>;
@@ -52,18 +63,23 @@ var torch = <item:minecraft:torch>;
 var tripwireHook = <item:minecraft:tripwire_hook>;
 var woodPlank = <tag:items:minecraft:planks>;
 var wool = <tag:items:minecraft:wool>;
+var zincIngot = <item:create:zinc_ingot>;
 
+var crusher = <recipetype:create:crushing>;
 var ferrousIngot = ironIngot | nickelIngot;
 var horizontal = <constant:minecraft:mirroraxis:horizontal>;
+var miller = <recipetype:create:milling>;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Bucket
 craftingTable.remove(bucket);
-craftingTable.addShaped("bucket", bucket, [
-    [ tinIngot, _, tinIngot ],
-    [ _, tinIngot, _ ],
-]);
+for bucketIngot in [ aluminumIngot, tinIngot, zincIngot ] {
+    craftingTable.addShaped("bucket_" + bucketIngot.descriptionId, bucket, [
+        [ bucketIngot, _, bucketIngot ],
+        [ _, bucketIngot, _ ],
+    ]);
+}
 
 // Clock
 craftingTable.remove(clock);
@@ -248,3 +264,25 @@ craftingTable.addShaped("soul_lanter", soulLantern, [
     [ platinumNugget, soulTorch, platinumNugget ],
     [ platinumNugget, platinumNugget, platinumNugget ],
 ]);
+
+// String
+craftingTable.remove(stringItem);
+craftingTable.addShaped("string_from_flax", stringItem, [
+    [ flax ],
+    [ flax ],
+    [ flax ],
+]);
+crusher.removeByInput(flax);
+crusher.addRecipe("mill_flax", [ stringItem, stringItem % 25, flaxSeeds % 75 ], flax);
+miller.removeByInput(flax);
+miller.addRecipe("crush_flax", [ stringItem, flaxSeeds % 25 ], flax);
+
+// Torch
+var mini = miniCoal | miniCharcoal;
+craftingTable.remove(torch);
+craftingTable.addShaped("anthracite_torch", torch * 10, [[ anthraciteCoal ], [ stick ]]);
+craftingTable.addShaped("bitumenous_torch", torch * 8, [[ bitumenousCoal ], [ stick ]]);
+craftingTable.addShaped("lignite_torch", torch * 6, [[ ligniteCoal ], [ stick ]]);
+craftingTable.addShaped("coal_torch", torch * 4, [[ coal | charcoal ], [ stick ]]);
+craftingTable.addShaped("peat_torch", torch * 3, [[ peatCoal ], [ stick ]]);
+craftingTable.addShaped("mini_torch", torch * 1, [[ mini ], [ mini ], [ stick ]]);

@@ -2,4 +2,10 @@ import mods.initialinventory.InvHandler;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-InvHandler.addStartingItem("10 gold coins", <item:createdeco:gold_coin> * 10);
+var claimBlock = <item:cc:claim_block>;
+var goldCoin = <item:createdeco:gold_coin>;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+InvHandler.addStartingItem("10 gold coins", goldCoin * 10);
+InvHandler.addStartingItem("claim block", claimBlock);

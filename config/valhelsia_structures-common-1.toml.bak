@@ -22,7 +22,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "taiga"]
 		#Dimensions the structure can NOT generate in
@@ -42,7 +42,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "taiga"]
 		#Dimensions the structure can NOT generate in
@@ -62,7 +62,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["desert"]
 		#Dimensions the structure can NOT generate in
@@ -82,7 +82,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "extreme_hills", "taiga"]
 		#Dimensions the structure can NOT generate in
@@ -102,7 +102,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "extreme_hills", "taiga"]
 		#Dimensions the structure can NOT generate in
@@ -122,7 +122,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "extreme_hills", "taiga", "desert", "mesa", "savanna", "jungle", "icy", "swamp", "mushroom"]
 		#Dimensions the structure can NOT generate in
@@ -142,7 +142,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 16
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest", "extreme_hills", "taiga"]
 		#Dimensions the structure can NOT generate in
@@ -162,7 +162,7 @@
 		#Minimum Separation (in chunks) [default: 7]
 		#Range: 0 ~ 200
 		separation = 7
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["swamp"]
 		#Dimensions the structure can NOT generate in
@@ -182,7 +182,7 @@
 		#Minimum Separation (in chunks) [default: 8]
 		#Range: 0 ~ 200
 		separation = 8
-		#Biome Categories the structure can generate in 
+		#Biome Categories the structure can generate in
 		#Allowed Values: [none, taiga, extreme_hills, jungle, mesa, plains, savanna, icy, theend, beach, forest, ocean, desert, river, swamp, mushroom, nether, underground, mountain]
 		biome_categories = ["plains", "forest"]
 		#Dimensions the structure can NOT generate in
@@ -195,4 +195,3 @@
 	[blocks.doused_torch]
 		#Enable/Disable the Doused Torch Feature. If disabled Water will no longer transform normal Torches into Doused Torches. \n Doused Torches will however still generate in structures. [default: false]
 		disable = false
-

@@ -29,14 +29,14 @@
 	#The upper limit of RNG for generating any pluton in a given chunk.
 	#Larger values indicate further distance between plutons.
 	#Range: 0.0 ~ 1.0
-	chunkSkipChance = 0.66
+	chunkSkipChance = 0.8
 
 #Feature Control
 ["feature control"]
 	#Output info into the logs when generating Geolosys deposits
-	debugWorldgen = true
+	debugWorldgen = false
 	#Outputs really advanced info when generating deposits.
-	advancedDebugWorldGen = true
+	advancedDebugWorldGen = false
 	#The fallback materials which a Deposit can replace if they're not specified by the deposit itself
 	#Format: Comma-delimited set of <modid:block> (see default for example)
 	defaultReplacementMaterials = ["minecraft:stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:netherrack", "minecraft:sandstone", "minecraft:deepslate", "minecraft:tuff", "minecraft:calcite", "minecraft:dripstone_block"]
@@ -53,3 +53,4 @@
 	enableYellorium = false
 	#This will make is so that Coal has a rare chance of dropping sulfur
 	enableSulfur = true
+
