@@ -66,9 +66,17 @@ var wool = <tag:items:minecraft:wool>;
 var zincIngot = <item:create:zinc_ingot>;
 
 var crusher = <recipetype:create:crushing>;
-var ferrousIngot = ironIngot | nickelIngot;
 var horizontal = <constant:minecraft:mirroraxis:horizontal>;
 var miller = <recipetype:create:milling>;
+
+var anyFerrousIngot = <tag:items:blockygoround:ferrous_ingot>;
+anyFerrousIngot.add(ironIngot, nickelIngot);
+
+var anyMiniCoal = <tag:items:blockygoround:mini_coal>;
+anyMiniCoal.add(miniCharcoal, miniCoal);
+
+var anyVanillaCoal = <tag:items:blockygoround:vanilla_coal>;
+anyVanillaCoal.add(charcoal, coal);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -136,37 +144,37 @@ craftingTable.addShaped("gold_horse_armor", goldHorseArmor, [
 // Iron Axe
 craftingTable.remove(ironAxe);
 craftingTable.addShapedMirrored("iron_axe", horizontal, ironAxe, [
-    [ ferrousIngot, ferrousIngot ],
-    [ ferrousIngot, stick ],
+    [ anyFerrousIngot, anyFerrousIngot ],
+    [ anyFerrousIngot, stick ],
     [ _, stick ],
 ]);
 
 // Iron Boots
 craftingTable.remove(ironBoots);
 craftingTable.addShaped("iron_boots", ironBoots, [
-    [ ferrousIngot, _, ferrousIngot ],
-    [ ferrousIngot, _, ferrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
 ]);
 
 // Iron Chestplate
 craftingTable.remove(ironChestplate);
 craftingTable.addShaped("iron_chestplate", ironChestplate, [
-    [ ferrousIngot, _, ferrousIngot ],
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
 ]);
 
 // Iron Helmet
 craftingTable.remove(ironHelmet);
 craftingTable.addShaped("iron_helmet", ironHelmet, [
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
-    [ ferrousIngot, _, ferrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
 ]);
 
 // Iron Hoe
 craftingTable.remove(ironHoe);
 craftingTable.addShapedMirrored("iron_hoe", horizontal, ironHoe, [
-    [ ferrousIngot, ferrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot ],
     [ _, stick ],
     [ _, stick ],
 ]);
@@ -174,23 +182,23 @@ craftingTable.addShapedMirrored("iron_hoe", horizontal, ironHoe, [
 // Iron Horse Armor
 craftingTable.remove(ironHorseArmor);
 craftingTable.addShaped("iron_horse_armor", ironHorseArmor, [
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
-    [ ferrousIngot, wool, ferrousIngot ],
-    [ ferrousIngot, _, ferrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
+    [ anyFerrousIngot, wool, anyFerrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
 ]);
 
 // Iron Leggings
 craftingTable.remove(ironLeggings);
 craftingTable.addShaped("iron_leggings", ironLeggings, [
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
-    [ ferrousIngot, _, ferrousIngot ],
-    [ ferrousIngot, _, ferrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
+    [ anyFerrousIngot, _, anyFerrousIngot ],
 ]);
 
 // Iron Pickaxe
 craftingTable.remove(ironPickaxe);
 craftingTable.addShapedMirrored("iron_pickaxe", horizontal, ironPickaxe, [
-    [ ferrousIngot, ferrousIngot, ferrousIngot ],
+    [ anyFerrousIngot, anyFerrousIngot, anyFerrousIngot ],
     [ _, stick, _ ],
     [ _, stick, _ ],
 ]);
@@ -198,7 +206,7 @@ craftingTable.addShapedMirrored("iron_pickaxe", horizontal, ironPickaxe, [
 // Iron Shovel
 craftingTable.remove(ironShovel);
 craftingTable.addShaped("iron_shovel", ironShovel, [
-    [ ferrousIngot ],
+    [ anyFerrousIngot ],
     [ stick ],
     [ stick ],
 ]);
@@ -206,8 +214,8 @@ craftingTable.addShaped("iron_shovel", ironShovel, [
 // Iron Sword
 craftingTable.remove(ironSword);
 craftingTable.addShaped("iron_sword", ironSword, [
-    [ ferrousIngot ],
-    [ ferrousIngot ],
+    [ anyFerrousIngot ],
+    [ anyFerrousIngot ],
     [ stick ],
 ]);
 
@@ -278,11 +286,10 @@ miller.removeByInput(flax);
 miller.addRecipe("crush_flax", [ stringItem, flaxSeeds % 25 ], flax);
 
 // Torch
-var mini = miniCoal | miniCharcoal;
 craftingTable.remove(torch);
 craftingTable.addShaped("anthracite_torch", torch * 10, [[ anthraciteCoal ], [ stick ]]);
 craftingTable.addShaped("bitumenous_torch", torch * 8, [[ bitumenousCoal ], [ stick ]]);
 craftingTable.addShaped("lignite_torch", torch * 6, [[ ligniteCoal ], [ stick ]]);
-craftingTable.addShaped("coal_torch", torch * 4, [[ coal | charcoal ], [ stick ]]);
+craftingTable.addShaped("coal_torch", torch * 4, [[ anyVanillaCoal ], [ stick ]]);
 craftingTable.addShaped("peat_torch", torch * 3, [[ peatCoal ], [ stick ]]);
-craftingTable.addShaped("mini_torch", torch * 1, [[ mini ], [ mini ], [ stick ]]);
+craftingTable.addShaped("mini_torch", torch * 1, [[ anyMiniCoal ], [ anyMiniCoal ], [ stick ]]);

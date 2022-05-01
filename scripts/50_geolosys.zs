@@ -1,20 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var _ = <item:minecraft:air>;
-var ancientDebris = <item:minecraft:ancient_debris> | <item:geolosys:ancient_debris_ore>;
 var cobbledDeepslate = <item:minecraft:cobbled_deepslate>;
 var cobblestone = <item:minecraft:cobblestone>;
-var deepslateDiamondOre = <item:minecraft:deepslate_diamond_ore> | <item:geolosys:deepslate_kimberlite_ore>;
-var deepslateEmeraldOre = <item:minecraft:deepslate_emerald_ore> | <item:geolosys:deepslate_beryl_ore>;
 var deepslateQuartzOre = <item:geolosys:deepslate_quartz_ore>;
 var diamond = <item:minecraft:diamond>;
-var diamondOre = <item:minecraft:diamond_ore> | <item:geolosys:kimberlite_ore>;
 var emerald = <item:minecraft:emerald>;
-var emeraldOre = <item:minecraft:emerald_ore> | <item:geolosys:beryl_ore>;
 var goldIngot = <item:minecraft:gold_ingot>;
 var goldNugget = <item:minecraft:gold_nugget>;
 var leadIngot = <item:geolosys:lead_ingot>;
-var netherGoldOre = <item:minecraft:nether_gold_ore> | <item:geolosys:nether_gold_ore>;
 var netheriteScrap = <item:minecraft:netherite_scrap>;
 var netherrack = <item:minecraft:netherrack>;
 var nickelIngot = <item:geolosys:nickel_ingot>;
@@ -26,33 +20,54 @@ var xp = <item:create:experience_nugget>;
 
 var crusher = <recipetype:create:crushing>;
 
+var anyAncientDebris = <tag:items:blockygoround:ancient_debris>;
+var anyDeepDiamondOre = <tag:items:blockygoround:deep_diamond_ore>;
+var anyDeepEmeraldOre = <tag:items:blockygoround:deep_emerald_ore>;
+var anyDiamondOre = <tag:items:blockygoround:diamond_ore>;
+var anyEmeraldOre = <tag:items:blockygoround:emerald_ore>;
+var anyNetherGoldOre = <tag:items:blockygoround:nether_gold_ore>;
+
+anyAncientDebris.add(<item:minecraft:ancient_debris>, <item:geolosys:ancient_debris_ore>);
+anyDeepDiamondOre.add(<item:minecraft:deepslate_diamond_ore>, <item:geolosys:deepslate_kimberlite_ore>);
+anyDeepEmeraldOre.add(<item:minecraft:deepslate_emerald_ore>, <item:geolosys:deepslate_beryl_ore>);
+anyDiamondOre.add(<item:minecraft:diamond_ore>, <item:geolosys:kimberlite_ore>);
+anyEmeraldOre.add(<item:minecraft:emerald_ore>, <item:geolosys:beryl_ore>);
+anyNetherGoldOre.add(<item:minecraft:nether_gold_ore>, <item:geolosys:nether_gold_ore>);
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Ancient Debris
-blastFurnace.removeByInput(ancientDebris.items[0]);
-blastFurnace.addRecipe("blast_ancient_debris", netheriteScrap, ancientDebris, 2.0, 200);
-furnace.removeByInput(ancientDebris.items[0]);
-furnace.addRecipe("smelt_ancient_debris", netheriteScrap, ancientDebris, 2.0, 400);
+for element in anyAncientDebris.elements {
+    blastFurnace.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_ancient_debris", netheriteScrap, anyAncientDebris, 2.0, 200);
+furnace.addRecipe("smelt_ancient_debris", netheriteScrap, anyAncientDebris, 2.0, 400);
 
 // Deepslate Diamond Ore
-blastFurnace.removeByInput(deepslateDiamondOre.items[0]);
-blastFurnace.addRecipe("blast_deepslate_diamond_ore", diamond, deepslateDiamondOre, 1.0, 200);
-furnace.removeByInput(deepslateDiamondOre.items[0]);
-furnace.addRecipe("smelt_deepslate_diamond_ore", diamond, deepslateDiamondOre, 1.0, 100);
-crusher.removeByInput(deepslateDiamondOre.items[0]);
+for element in anyDeepDiamondOre.elements {
+    blastFurnace.removeByInput(element);
+    crusher.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_deepslate_diamond_ore", diamond, anyDeepDiamondOre, 1.0, 200);
+furnace.addRecipe("smelt_deepslate_diamond_ore", diamond, anyDeepDiamondOre, 1.0, 100);
 crusher.addRecipe("crush_deepslate_diamond_ore", [
     diamond * 2, diamond % 25, xp % 75, cobbledDeepslate % 12.5
-], deepslateDiamondOre);
+], anyDeepDiamondOre);
 
 // Deepslate Emerald Ore
-blastFurnace.removeByInput(deepslateEmeraldOre.items[0]);
-blastFurnace.addRecipe("blast_deepslate_emerald_ore", emerald, deepslateEmeraldOre, 1.0, 200);
-furnace.removeByInput(deepslateEmeraldOre.items[0]);
-furnace.addRecipe("smelt_deepslate_emerald_ore", emerald, deepslateEmeraldOre, 1.0, 100);
-crusher.removeByInput(deepslateEmeraldOre.items[0]);
+for element in anyDeepEmeraldOre.elements {
+    blastFurnace.removeByInput(element);
+    crusher.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_deepslate_emerald_ore", emerald, anyDeepEmeraldOre, 1.0, 200);
+furnace.addRecipe("smelt_deepslate_emerald_ore", emerald, anyDeepEmeraldOre, 1.0, 100);
 crusher.addRecipe("crush_deepslate_emerald_ore", [
     emerald * 2, emerald % 25, xp % 75, cobbledDeepslate % 12.5
-], deepslateEmeraldOre);
+], anyDeepEmeraldOre);
 
 // Deepslate Quartz Ore
 blastFurnace.addRecipe("blast_deepslate_quartz_ore", quartz, deepslateQuartzOre, 1.0, 200);
@@ -62,34 +77,40 @@ crusher.addRecipe("crush_deepslate_quartz_ore", [
 ], deepslateQuartzOre);
 
 // Diamond Ore
-blastFurnace.removeByInput(diamondOre.items[0]);
-blastFurnace.addRecipe("blast_diamond_ore", diamond, diamondOre, 1.0, 200);
-furnace.removeByInput(diamondOre.items[0]);
-furnace.addRecipe("smelt_diamond_ore", diamond, diamondOre, 1.0, 100);
-crusher.removeByInput(diamondOre.items[0]);
+for element in anyDiamondOre.elements {
+    blastFurnace.removeByInput(element);
+    crusher.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_diamond_ore", diamond, anyDiamondOre, 1.0, 200);
+furnace.addRecipe("smelt_diamond_ore", diamond, anyDiamondOre, 1.0, 100);
 crusher.addRecipe("crush_diamond_ore", [
     diamond, diamond % 75, xp % 75, cobblestone % 12.5
-], diamondOre);
+], anyDiamondOre);
 
 // Emerald Ore
-blastFurnace.removeByInput(emeraldOre.items[0]);
-blastFurnace.addRecipe("blast_emerald_ore", emerald, emeraldOre, 1.0, 200);
-furnace.removeByInput(emeraldOre.items[0]);
-furnace.addRecipe("smelt_emerald_ore", emerald, emeraldOre, 1.0, 100);
-crusher.removeByInput(emeraldOre.items[0]);
+for element in anyEmeraldOre.elements {
+    blastFurnace.removeByInput(element);
+    crusher.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_emerald_ore", emerald, anyEmeraldOre, 1.0, 200);
+furnace.addRecipe("smelt_emerald_ore", emerald, anyEmeraldOre, 1.0, 100);
 crusher.addRecipe("crush_emerald_ore", [
     emerald, emerald % 75, xp % 75, cobblestone % 12.5
-], emeraldOre);
+], anyEmeraldOre);
 
 // Nether Gold Ore
-blastFurnace.removeByInput(netherGoldOre.items[0]);
-blastFurnace.addRecipe("blast_nether_gold_ore", goldIngot, netherGoldOre, 1.0, 200);
-furnace.removeByInput(netherGoldOre.items[0]);
-furnace.addRecipe("smelt_nether_gold_ore", goldIngot, netherGoldOre, 1.0, 100);
-crusher.removeByInput(netherGoldOre.items[0]);
+for element in anyNetherGoldOre.elements {
+    blastFurnace.removeByInput(element);
+    crusher.removeByInput(element);
+    furnace.removeByInput(element);
+}
+blastFurnace.addRecipe("blast_nether_gold_ore", goldIngot, anyNetherGoldOre, 1.0, 200);
+furnace.addRecipe("smelt_nether_gold_ore", goldIngot, anyNetherGoldOre, 1.0, 100);
 crusher.addRecipe("crush_nether_gold_ore", [
     goldNugget * 7, goldNugget % 50, xp % 75, netherrack % 12.5
-], netherGoldOre);
+], anyNetherGoldOre);
 
 // Prospector's Pick
 craftingTable.remove(prospectorsPick);

@@ -23,8 +23,8 @@ function processOre(
     deepCrushCount as int,
     deepCrushPercent as float
 ) as void {
-    var Crusher = <recipetype:create:crushing>;
-    var Splasher = <recipetype:create:splashing>;
+    var crusher = <recipetype:create:crushing>;
+    var splasher = <recipetype:create:splashing>;
 
     var deepCobble = <item:minecraft:cobbled_deepslate>;
     var stoneCobble = <item:minecraft:cobblestone>;
@@ -34,10 +34,10 @@ function processOre(
     for itemStack in stoneOre.items {
         blastFurnace.removeByInput(itemStack);
         furnace.removeByInput(itemStack);
-        Crusher.removeByInput(itemStack);
+        crusher.removeByInput(itemStack);
     }
     blastFurnace.addRecipe("blast_stone_ore_" + name, ingot, stoneOre, 0.75, 100);
-    Crusher.addRecipe("crush_stone_ore_" + name, [
+    crusher.addRecipe("crush_stone_ore_" + name, [
         crushed * crushCount, crushed % crushPercent, xp % 75, stoneCobble % 12
     ], stoneOre);
     furnace.addRecipe("smelt_stone_ore_" + name, ingot, stoneOre, 0.75, 200);
@@ -46,10 +46,10 @@ function processOre(
     for itemStack in deepOre.items {
         blastFurnace.removeByInput(itemStack);
         furnace.removeByInput(itemStack);
-        Crusher.removeByInput(itemStack);
+        crusher.removeByInput(itemStack);
     }
     blastFurnace.addRecipe("blast_deep_ore_" + name, ingot, deepOre, 0.75, 100);
-    Crusher.addRecipe("crushed_deep_ore_" + name, [
+    crusher.addRecipe("crushed_deep_ore_" + name, [
         crushed * deepCrushCount, crushed % deepCrushPercent, xp % 75, deepCobble % 12
     ], deepOre);
     furnace.addRecipe("smelt_deep_ore_" + name, ingot, deepOre, 0.75, 200);
@@ -57,7 +57,7 @@ function processOre(
     // Process raw metal chunks
     for itemStack in raw.items {
         blastFurnace.removeByInput(itemStack);
-        Crusher.removeByInput(itemStack);
+        crusher.removeByInput(itemStack);
         furnace.removeByInput(itemStack);
     }
     blastFurnace.addRecipe("blast_raw_" + name, ingot, raw, 0.75, 100);
@@ -67,7 +67,7 @@ function processOre(
             [raw, raw, raw], [raw, raw, raw], [raw, raw, raw],
         ]);
     }
-    Crusher.addRecipe("crush_raw_" + name, [crushed, xp % 75], raw);
+    crusher.addRecipe("crush_raw_" + name, [crushed, xp % 75], raw);
     furnace.addRecipe("smelt_raw_" + name, ingot, raw, 0.75, 200);
 
     // Process crushed metal
@@ -75,8 +75,8 @@ function processOre(
     blastFurnace.addRecipe("blast_crushed_" + name, ingot, crushed, 0.75, 100);
     furnace.removeByInput(crushed);
     furnace.addRecipe("smelt_crushed_" + name, ingot, crushed, 0.75, 200);
-    Splasher.removeByInput(crushed);
-    Splasher.addRecipe("splash_crushed_" + name, [nugget.items[0] * 9, residue], crushed);
+    splasher.removeByInput(crushed);
+    splasher.addRecipe("splash_crushed_" + name, [nugget.items[0] * 9, residue], crushed);
 
     // Process nuggets
     for itemStack in nugget.items {
@@ -97,7 +97,7 @@ function processMixedOre(
     primaryPercent as float,
     primaryIngot as IItemStack
 ) as void {
-    var Crusher = <recipetype:create:crushing>;
+    var crusher = <recipetype:create:crushing>;
     var deepCobble = <item:minecraft:cobbled_deepslate>;
     var secondaryPercent = 100 - primaryPercent;
     var stoneCobble = <item:minecraft:cobblestone>;
@@ -105,9 +105,9 @@ function processMixedOre(
 
     // Process stone ore
     for itemStack in stoneOre.items {
-        Crusher.removeByInput(itemStack);
+        crusher.removeByInput(itemStack);
     }
-    Crusher.addRecipe("crush_stone_ore_" + name, [
+    crusher.addRecipe("crush_stone_ore_" + name, [
         primaryCrushed % primaryPercent,
         primaryCrushed % (primaryPercent * 0.75),
         secondaryCrushed % secondaryPercent,
@@ -120,9 +120,9 @@ function processMixedOre(
 
     // Process deepslate ore
     for itemStack in deepOre.items {
-        Crusher.removeByInput(itemStack);
+        crusher.removeByInput(itemStack);
     }
-    Crusher.addRecipe("crushed_deep_ore_" + name, [
+    crusher.addRecipe("crushed_deep_ore_" + name, [
         (primaryCrushed * 2) % primaryPercent,
         primaryCrushed % (primaryPercent * 0.25),
         (secondaryCrushed * 2) % secondaryPercent,
