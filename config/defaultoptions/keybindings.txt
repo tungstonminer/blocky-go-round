@@ -89,29 +89,29 @@ key_tetra.toolbelt.binding.open:key.keyboard.x:ALT
 key_key.preciseblockplacing.toggle_new_location:key.keyboard.unknown:NONE
 key_key.preciseblockplacing.toggle_enabled:key.keyboard.unknown:NONE
 key_key.tinyredstone.rotation_lock:key.keyboard.left.alt:NONE
-key_placebo.toggleTrails:key.keyboard.unknown:NONE
 key_treechop.key.toggle_chopping:scancode.0:NONE
 key_treechop.key.toggle_felling:scancode.0:NONE
+key_Show recipe book in crafting grid toggle.:key.keyboard.unknown:NONE
 key_treechop.key.cycle_sneak_behavior:scancode.0:NONE
 key_treechop.key.open_settings_overlay:key.keyboard.n:NONE
+key_placebo.toggleTrails:key.keyboard.unknown:NONE
 key_placebo.toggleWings:key.keyboard.unknown:NONE
-key_Show recipe book in crafting grid toggle.:key.keyboard.unknown:NONE
-key_mapfrontiers.key.open_settings:key.keyboard.f8:NONE
 key_fpsreducer.key.openGui:key.keyboard.end:NONE
 key_fpsreducer.key.forceIdle:key.keyboard.pause:NONE
+key_mapfrontiers.key.open_settings:key.keyboard.f8:NONE
+key_key.inventorysorter.sort:key.keyboard.q:NONE
 key_key.inventorysorter.itemout:key.mouse.102:NONE
 key_key.inventorysorter.itemin:key.mouse.100:NONE
-key_key.inventorysorter.sort:key.keyboard.q:NONE
+key_key.wallet:key.keyboard.v:NONE
+key_key.team_settings:key.keyboard.unknown:NONE
 key_key.waila.config:key.keyboard.f9:NONE
 key_key.waila.show_overlay:key.keyboard.unknown:NONE
 key_key.waila.toggle_liquid:key.keyboard.f10:NONE
 key_key.waila.show_details:key.keyboard.unknown:NONE
 key_key.backpack:key.keyboard.b:NONE
-key_key.wallet:key.keyboard.v:NONE
-key_key.team_settings:key.keyboard.unknown:NONE
 key_key.worldstripper.strip_world:key.keyboard.delete:NONE
 key_key.worldstripper.dress_world:key.keyboard.delete:SHIFT
-key_key.worldstripper.add_block:key.keyboard.unknown:NONE
+key_key.worldstripper.add_block:key.keyboard.equal:SHIFT
 key_key.worldstripper.remove_block:key.keyboard.minus:SHIFT
 key_key.worldstripper.increase_range:key.keyboard.unknown:NONE
 key_key.worldstripper.decrease_range:key.keyboard.unknown:NONE

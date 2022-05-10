@@ -1,4 +1,6 @@
 {
   "item.createdeco.iron_coin": "Silver Coin",
-  "item.createdeco.iron_coinstack": "Silver Coinstack"
+  "item.createdeco.iron_coinstack": "Silver Coinstack",
+  "item.createdeco.zinc_coin": "Platinum Coin",
+  "item.createdeco.zinc_coinstack": "Platinum Coinstack"
 }

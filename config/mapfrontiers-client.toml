@@ -45,11 +45,11 @@ filterFrontierDimension = "all"
 	slot3 = "Banner"
 	#Anchor point of the HUD. In the case of choosing the minimap as an anchor, its default position will be used as a reference in the coordinates.
 	#Allowed Values: ScreenTop, ScreenTopRight, ScreenRight, ScreenBottomRight, ScreenBottom, ScreenBottomLeft, ScreenLeft, ScreenTopLeft, Minimap, MinimapHorizontal, MinimapVertical
-	anchor = "MinimapHorizontal"
+	anchor = "ScreenBottomRight"
 	#Size of the HUD banner.
 	#Range: > -2147483648
-	xPosition = 295
+	xPosition = 289
 	#Size of the HUD banner.
 	#Range: > -2147483648
-	yPosition = -300
+	yPosition = 179
 

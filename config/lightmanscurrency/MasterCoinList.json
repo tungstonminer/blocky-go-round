@@ -1,6 +1,11 @@
 {
     "CoinEntries": [
         {
+            "coinitem": "createdeco:zinc_coinstack",
+            "chain": "main",
+            "worth": { "coin": "createdeco:zinc_coin", "count": 4 },
+            "hidden": true
+        }, {
             "coinitem": "createdeco:gold_coinstack",
             "chain": "main",
             "worth": { "coin": "createdeco:gold_coin", "count": 4 },
@@ -18,6 +23,10 @@
         },
 
         {
+            "coinitem": "createdeco:zinc_coin",
+            "chain": "main",
+            "worth": { "coin": "createdeco:gold_coin", "count": 10 }
+        }, {
             "coinitem": "createdeco:gold_coin",
             "chain": "main",
             "worth": { "coin": "createdeco:iron_coin", "count": 10 }

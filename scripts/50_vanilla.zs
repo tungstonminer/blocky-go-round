@@ -131,7 +131,7 @@ craftingTable.addShaped("diamond_horse_armor", diamondHorseArmor, [
 
 // Flint and Steel
 craftingTable.remove(flintAndSteel);
-craftingTable.addShapeless("flint_and_steel", flintAndSteel, [ flint, steelIngot ]);
+craftingTable.addShapeless("flint_and_steel", flintAndSteel, [ flint, anyFerrousIngot ]);
 
 // Gold Horse Armor
 craftingTable.remove(goldHorseArmor);
@@ -260,7 +260,7 @@ craftingTable.addShaped("saddle", saddle, [
 // Shield
 craftingTable.remove(shield);
 craftingTable.addShaped("shield", shield, [
-    [ woodPlank, steelIngot, woodPlank ],
+    [ woodPlank, anyFerrousIngot, woodPlank ],
     [ woodPlank, woodPlank, woodPlank ],
     [ _, woodPlank, _ ],
 ]);

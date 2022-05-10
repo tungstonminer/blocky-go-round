@@ -13,20 +13,24 @@
 		#Allowed Values: FULL, PARTIAL, NONE
 		traderRenderType = "FULL"
 
-	#Wallet Button Settings
-	[client.wallet_button]
-		#Whether a wallet button should appear on the inventory screen, allowing you to open the wallet screen without use of the keybind.
-		renderButton = true
-		#The x position that the button should be placed at.
-		#Range: -50 ~ 255
-		buttonX = 176
-		#The y position that the button should be placed at.
-		#Range: -50 ~ 255
-		buttonY = 0
-		#The x position that the button should be placed at in the creative screen.
-		#Range: -50 ~ 255
-		buttonCreativeX = 195
-		#The y position that the button should be placed at.
-		#Range: -50 ~ 255
-		buttonCreativeY = 0
+	#Wallet Slot Settings
+	[client.wallet_slot]
+		#The x position that the wallet slot will be placed at in the players inventory.
+		#Range: -255 ~ 255
+		slotX = 76
+		#The y position that the wallet slot will be placed at in the players inventory.
+		#Range: -255 ~ 255
+		slotY = 43
+		#The x position that the wallet slot will be placed at in the players creative inventory.
+		#Range: -255 ~ 255
+		creativeSlotX = 126
+		#The y position that the wallet slot will be placed at in the players creative inventory.
+		#Range: -255 ~ 255
+		creativeSlotY = 19
+		#The x offset that the wallet button should be placed at relative to the wallet slot position.
+		#Range: -255 ~ 255
+		buttonX = 8
+		#The y offset that the wallet button should be placed at relative to the wallet slot position.
+		#Range: -255 ~ 255
+		buttonY = -10
 
