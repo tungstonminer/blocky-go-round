@@ -23,3 +23,8 @@ As your compound grows, Cobbled Paths will let you get around quickly, and you c
 Logistics to set up automated boats and trains to your far-flung enterprises.  If you find yourself
 playing on a server, Lightman's Currency and Player Trading will come in handy to help you exchange
 your wares with your fellow players.
+
+### About the Wiki
+
+The wiki on this site describes everything you'll need to know to play this modpack.  Click on the
+Wiki link above to access it.
