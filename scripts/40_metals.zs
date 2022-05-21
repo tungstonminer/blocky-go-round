@@ -8,6 +8,10 @@ import mods.jei.JEI;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var _ = <item:minecraft:air>;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function processOre(
     name as string,
     stoneOre as IIngredient,
@@ -15,20 +19,52 @@ function processOre(
     raw as IIngredient,
     rawBlock as IItemStack,
     crushed as IItemStack,
-    ingot as IItemStack,
-    nugget as IIngredient,
+    allBlocks as IIngredient,
+    allIngots as IIngredient,
+    allNuggets as IIngredient,
     residue as Percentaged<IItemStack>,
     crushCount as int,
     crushPercent as float,
     deepCrushCount as int,
     deepCrushPercent as float
 ) as void {
+    var _ = <item:minecraft:air>;
     var crusher = <recipetype:create:crushing>;
     var splasher = <recipetype:create:splashing>;
 
     var deepCobble = <item:minecraft:cobbled_deepslate>;
     var stoneCobble = <item:minecraft:cobblestone>;
     var xp = <item:create:experience_nugget>;
+
+    var block = allBlocks.items[0];
+    var ingot = allIngots.items[0];
+    var nugget = allNuggets.items[0];
+
+    for itemStack in allBlocks.items { craftingTable.remove(itemStack); }
+    for itemStack in allIngots.items { craftingTable.remove(itemStack); }
+    for itemStack in allNuggets.items { craftingTable.remove(itemStack); }
+
+    // Standardize conversions between blocks and ingots
+    if (block != _ && ingot != _) {
+        craftingTable.addShaped("block_from_ingots_" + name, block, [
+            [ allIngots, allIngots, allIngots ],
+            [ allIngots, allIngots, allIngots ],
+            [ allIngots, allIngots, allIngots ]
+        ]);
+
+        craftingTable.addShapeless("ingots_from_block_" + name, ingot * 9, [ allBlocks ]);
+    }
+
+    // Standardize conversions between ingots and nuggets
+    if (ingot != _ && nugget != _) {
+        craftingTable.addShaped("ingot_from_nuggets_" + name, ingot, [
+            [ allNuggets, allNuggets, allNuggets ],
+            [ allNuggets, allNuggets, allNuggets ],
+            [ allNuggets, allNuggets, allNuggets ]
+        ]);
+
+        craftingTable.addShapeless("nuggets_from_ingot_" + name, nugget * 9, [ allIngots ]);
+    }
 
     // Process stone ore
     for itemStack in stoneOre.items {
@@ -76,16 +112,7 @@ function processOre(
     furnace.removeByInput(crushed);
     furnace.addRecipe("smelt_crushed_" + name, ingot, crushed, 0.75, 200);
     splasher.removeByInput(crushed);
-    splasher.addRecipe("splash_crushed_" + name, [nugget.items[0] * 9, residue], crushed);
-
-    // Process nuggets
-    for itemStack in nugget.items {
-        craftingTable.remove(itemStack);
-    }
-    craftingTable.addShapeless("nugget_from_ingot_" + name, nugget.items[0] * 9, [ ingot ]);
-    craftingTable.addShaped("ingot_from_nugget_" + name, ingot, [
-        [nugget, nugget, nugget], [nugget, nugget, nugget], [nugget, nugget, nugget]
-    ]);
+    splasher.addRecipe("splash_crushed_" + name, [nugget * 9, residue], crushed);
 }
 
 function processMixedOre(
@@ -143,6 +170,7 @@ processOre(
     <item:geolosys:aluminum_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_aluminum_ore>,
+    _,
     <item:geolosys:aluminum_ingot>,
     <item:geolosys:aluminum_nugget>,
     <item:create:rose_quartz> % 25,
@@ -157,6 +185,7 @@ processOre(
     <item:minecraft:raw_copper> | <item:geolosys:copper_cluster>,
     <item:minecraft:raw_copper_block>,
     <item:create:crushed_copper_ore>,
+    <item:minecraft:copper_block> | <item:minecraft:cut_copper> | <item:minecraft:waxed_copper_block>,
     <item:minecraft:copper_ingot>,
     <item:create:copper_nugget> | <item:geolosys:copper_nugget>,
     <item:minecraft:redstone> % 12.5,
@@ -171,6 +200,7 @@ processOre(
     <item:minecraft:raw_gold> | <item:geolosys:gold_cluster>,
     <item:minecraft:raw_gold_block>,
     <item:create:crushed_gold_ore>,
+    <item:minecraft:gold_block>,
     <item:minecraft:gold_ingot>,
     <item:minecraft:gold_nugget>,
     <item:minecraft:quartz> % 50,
@@ -185,6 +215,7 @@ processOre(
     <item:minecraft:raw_iron> | <item:geolosys:iron_cluster>,
     <item:minecraft:raw_iron_block>,
     <item:create:crushed_iron_ore>,
+    <item:minecraft:iron_block>,
     <item:minecraft:iron_ingot>,
     <item:minecraft:iron_nugget>,
     <item:geolosys:nickel_nugget> % 25,
@@ -199,6 +230,7 @@ processOre(
     <item:geolosys:lead_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_lead_ore>,
+    _,
     <item:geolosys:lead_ingot>,
     <item:geolosys:lead_nugget>,
     <item:geolosys:silver_nugget> % 25,
@@ -213,6 +245,7 @@ processOre(
     <item:geolosys:nickel_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_nickel_ore>,
+    _,
     <item:geolosys:nickel_ingot>,
     <item:geolosys:nickel_nugget>,
     <item:minecraft:iron_nugget> % 25,
@@ -227,6 +260,7 @@ processOre(
     <item:geolosys:platinum_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_platinum_ore>,
+    _,
     <item:geolosys:platinum_ingot>,
     <item:geolosys:platinum_nugget>,
     <item:minecraft:amethyst_shard> % 50,
@@ -241,6 +275,7 @@ processOre(
     <item:geolosys:silver_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_silver_ore>,
+    _,
     <item:geolosys:silver_ingot>,
     <item:geolosys:silver_nugget>,
     <item:geolosys:lead_nugget> % 25,
@@ -255,6 +290,7 @@ processOre(
     <item:geolosys:tin_cluster>,
     <item:minecraft:air>,
     <item:create:crushed_tin_ore>,
+    _,
     <item:geolosys:tin_ingot>,
     <item:geolosys:tin_nugget>,
     <item:minecraft:emerald> % 5,
@@ -269,6 +305,7 @@ processOre(
     <item:create:raw_zinc> | <item:geolosys:zinc_cluster>,
     <item:create:raw_zinc_block>,
     <item:create:crushed_zinc_ore>,
+    <item:create:zinc_block>,
     <item:create:zinc_ingot>,
     <item:create:zinc_nugget> | <item:geolosys:zinc_nugget>,
     <item:minecraft:gunpowder> % 25,
@@ -312,6 +349,5 @@ var REMOVE_LIST = [
 
 for itemStack in REMOVE_LIST {
     craftingTable.remove(itemStack);
-    craftingTable.removeByInput(itemStack);
     JEI.hideIngredient(itemStack);
 }

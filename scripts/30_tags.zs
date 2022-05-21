@@ -14,3 +14,19 @@
 <tag:items:minecraft:piglin_loved>.remove(<item:supplementaries:hourglass>);
 <tag:items:steampowered:bronze>.remove(<item:create:brass_ingot>);
 <tag:items:steampowered:bronzeplate>.remove(<item:create:brass_sheet>);
+
+<tag:items:forge:seeds>.add(
+    <item:finallyfarmabledyes:magenta>,
+    <item:finallyfarmabledyes:azure_bluet>,
+    <item:finallyfarmabledyes:light_blue>,
+    <item:finallyfarmabledyes:blue>,
+    <item:finallyfarmabledyes:yellow>,
+    <item:finallyfarmabledyes:white>,
+    <item:finallyfarmabledyes:orange>,
+    <item:finallyfarmabledyes:oxeye_daisy>,
+    <item:finallyfarmabledyes:pink>,
+    <item:finallyfarmabledyes:red>,
+    <item:finallyfarmabledyes:red_tulip>,
+    <item:finallyfarmabledyes:light_gray>,
+    <item:finallyfarmabledyes:black>
+);
